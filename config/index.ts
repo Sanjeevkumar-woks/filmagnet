@@ -1,0 +1,27 @@
+import localConfig from './local.json'
+import productionConfig from './production.json'
+
+interface config {
+    BACKEND_URL: {
+        DB_SERVICES: string;
+    },
+    FRONTEND_URL: {
+        APP_URL: string;
+    }
+}
+
+
+let config: Config;
+
+switch (process.env.NEXT_PUBLIC_APP_MODE as string) {
+    case 'production':
+        config = productionConfig;
+        break;
+    case 'local':
+        config = localConfig;
+        break;
+    default:
+        config = localConfig;
+}
+
+export default config;

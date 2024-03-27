@@ -1,0 +1,8 @@
+{
+  "BACKEND_URL": {
+    "DB_SERVICES": "https://backend.dev.newtral.io/auth-service"
+  },
+  "FRONTEND_URL": {
+    "APP_URL": "http://localhost:3000/"
+  }
+}
