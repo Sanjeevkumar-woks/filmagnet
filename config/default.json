@@ -1,6 +1,6 @@
 {
   "BACKEND_URL": {
-    "DB_SERVICES": "http://localhost:8000/"
+    "DB_SERVICES": "http://localhost:8080/"
   },
   "FRONTEND_URL": {
     "APP_URL": "http://localhost:3000/"

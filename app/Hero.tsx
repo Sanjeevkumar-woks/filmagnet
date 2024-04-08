@@ -33,8 +33,10 @@ const Hero = () => {
   const [bgImage, setBgImage] = useState("");
 
   useEffect(() => {
-    const imageUrl = theme === "light" ? "/images/hero.jpg" : "";
+    const imageUrl =
+      theme === "dark" ? "/images/hero.jpg" : "/images/hero2.jpg";
     setBgImage(imageUrl);
+    console.log("imageUrl===========>", imageUrl);
   }, [theme]);
 
   return (
@@ -45,7 +47,7 @@ const Hero = () => {
       } relative min-h-screen w-full mx-auto overflow-hidden`}
     >
       <div className="absolute -z-10 min-h-screen h-full w-full mt-15">
-        {theme === "light" && (
+        {
           <Image
             src={bgImage ? bgImage : ""}
             layout="fill"
@@ -55,7 +57,7 @@ const Hero = () => {
             style={{ opacity: 0.8 }}
             alt=""
           />
-        )}
+        }
       </div>
       <div className="py-16 lg:py-48 text-white justify-start flex-col px-12">
         <p className="text-2xl mb-5 text-white flex">

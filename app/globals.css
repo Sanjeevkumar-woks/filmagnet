@@ -14,6 +14,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif; /* Apply Open Sans font to the body */
+  background-color: #6565656a;
 }
 
 ::-webkit-scrollbar {
