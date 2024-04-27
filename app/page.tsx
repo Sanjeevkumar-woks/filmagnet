@@ -1,26 +1,17 @@
 "use client";
-import { QueryClient, QueryClientProvider } from "react-query";
-import Header from "./Header";
-import Hero from "./Hero";
-import Movies from "./Movies";
 
-export const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      retry: false,
-      refetchOnWindowFocus: false,
-    },
-  },
-});
+import Footer from "@/src/components/Footer";
+import Header from "../src/components/Header";
+import Hero from "../src/components/Hero";
+import Movies from "../src/components/Movies";
 
 export default function Home() {
   return (
     <>
-      <QueryClientProvider client={queryClient}>
-        <Header />
-        <Hero />
-        <Movies />
-      </QueryClientProvider>
+      <Header />
+      <Hero />
+      <Movies />
+      <Footer />
     </>
   );
 }
