@@ -1,5 +1,5 @@
 "use client";
-import Movies from "@/src/components/Movies";
+import Movies from "@/app/Movies";
 import VideoModal from "@/src/components/videoModal";
 import { FilmsService } from "@/src/services/FilmsService";
 import { BsShareFill, BsStarFill } from "react-icons/bs";

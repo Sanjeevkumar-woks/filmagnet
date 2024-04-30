@@ -1,9 +1,9 @@
 "use client";
 
 import Footer from "@/src/components/Footer";
-import Header from "../src/components/Header";
-import Hero from "../src/components/Hero";
-import Movies from "../src/components/Movies";
+import Header from "./Header";
+import Hero from "./Hero";
+import Movies from "./Movies";
 
 export default function Home() {
   return (

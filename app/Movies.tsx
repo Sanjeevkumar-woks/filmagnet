@@ -8,8 +8,9 @@ import { motion } from "framer-motion";
 import { useFilms } from "@/src/hooks/useFilms";
 import MovieCard from "./MoviesCard";
 import Loader from "@/src/utils/Loader";
-import { Pagination } from 'antd';
-
+import { Pagination } from "antd";
+import { Movie } from "@/src/utils/types";
+import { useEffect } from "react";
 
 const Movies = () => {
   const { data: movies, isLoading, setSearchKeyword, setPage } = useFilms();
@@ -30,25 +31,27 @@ const Movies = () => {
       ) : (
         <section
           id="home"
-          className={`${theme === "dark" && "bg-grey-900"
-            } relative min-h-screen  p-10 overflow-hidden`}
+          className={`${
+            theme === "dark" && "bg-grey-900"
+          } relative min-h-screen  p-10 overflow-hidden`}
         >
           <div className="flex flex-col gap-6">
-            <h2>Upcoming Movies</h2>
+            <h2>Movies</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-              {movies.map((movie: any) => (
-                <MovieCard
-                  movie={movie}
-                />
-
+              {movies?.map((movie: Movie) => (
+                <MovieCard movie={movie} />
               ))}
-
-            </div >
+            </div>
+            <h2>Series</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              {movies?.map((movie: Movie) => (
+                <MovieCard movie={movie} />
+              ))}
+            </div>
 
             <div className="flex justify-center items-center">
               <Pagination defaultCurrent={1} total={50} />
             </div>
-
           </div>
         </section>
       )}
