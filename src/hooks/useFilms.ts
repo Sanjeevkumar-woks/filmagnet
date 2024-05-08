@@ -28,8 +28,6 @@ export function useFilms() {
     }
   );
 
-  console.log(data, "=====>");
-
   return {
     data,
     isLoading,

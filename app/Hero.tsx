@@ -36,7 +36,6 @@ const Hero = () => {
     const imageUrl =
       theme === "dark" ? "/images/hero.jpg" : "/images/hero2.jpg";
     setBgImage(imageUrl);
-    console.log("imageUrl===========>", imageUrl);
   }, [theme]);
 
   return (

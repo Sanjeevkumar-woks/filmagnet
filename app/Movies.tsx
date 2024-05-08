@@ -39,13 +39,13 @@ const Movies = () => {
             <h2>Movies</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {movies?.map((movie: Movie) => (
-                <MovieCard movie={movie} />
+                <MovieCard movie={movie} key={movie._id} />
               ))}
             </div>
             <h2>Series</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {movies?.map((movie: Movie) => (
-                <MovieCard movie={movie} />
+                <MovieCard movie={movie} key={movie._id} />
               ))}
             </div>
 
